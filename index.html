@@ -19,6 +19,8 @@
       background-color: var(--black);
       color: white;
       overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
     }
 
     nav {
@@ -27,6 +29,8 @@
       gap: 20px;
       padding: 1.2rem 2rem;
       background-color: rgba(0, 0, 0, 0.95);
+      position: relative;
+      z-index: 100;
     }
 
     nav a {
@@ -43,6 +47,8 @@
     .hero {
       text-align: center;
       padding: 4rem 1rem 2rem;
+      position: relative;
+      z-index: 10;
     }
 
     .hero img.logo {
@@ -90,6 +96,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
+      position: relative;
+      z-index: 10;
     }
 
     .review-card {
@@ -116,6 +124,105 @@
       font-size: 0.9rem;
       color: rgba(255, 255, 255, 0.4);
       background-color: #000;
+      position: relative;
+      z-index: 10;
+    }
+
+    .floating-logo {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      pointer-events: none;
+      filter: drop-shadow(0 0 8px rgba(62, 109, 246, 0.4));
+      z-index: 1;
+    }
+
+    .floating-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes float1 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(40px, 60px) rotate(90deg); }
+      50% { transform: translate(20px, 40px) rotate(180deg); }
+      75% { transform: translate(60px, 20px) rotate(270deg); }
+    }
+
+    @keyframes float2 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-50px, 70px) rotate(-90deg); }
+      50% { transform: translate(-30px, 30px) rotate(-180deg); }
+      75% { transform: translate(-70px, 50px) rotate(-270deg); }
+    }
+
+    @keyframes float3 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(70px, -40px) rotate(120deg); }
+      50% { transform: translate(40px, -70px) rotate(240deg); }
+      75% { transform: translate(90px, -20px) rotate(360deg); }
+    }
+
+    @keyframes float4 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-80px, -30px) rotate(-120deg); }
+      50% { transform: translate(-40px, -80px) rotate(-240deg); }
+      75% { transform: translate(-60px, -40px) rotate(-360deg); }
+    }
+
+    @keyframes float5 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(30px, -60px) rotate(60deg); }
+      50% { transform: translate(60px, -30px) rotate(120deg); }
+      75% { transform: translate(20px, -80px) rotate(180deg); }
+    }
+
+    @keyframes shake1 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(2px, 3px) rotate(1deg); }
+      50% { transform: translate(-2px, -3px) rotate(-1deg); }
+      75% { transform: translate(3px, -2px) rotate(2deg); }
+    }
+
+    @keyframes shake2 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-3px, 2px) rotate(-1deg); }
+      50% { transform: translate(3px, -2px) rotate(1deg); }
+      75% { transform: translate(-2px, 3px) rotate(-2deg); }
+    }
+
+    @keyframes shake3 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(4px, -1px) rotate(2deg); }
+      50% { transform: translate(-4px, 1px) rotate(-2deg); }
+      75% { transform: translate(1px, 4px) rotate(1deg); }
+    }
+
+    @keyframes shake4 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-1px, -4px) rotate(-2deg); }
+      50% { transform: translate(1px, 4px) rotate(2deg); }
+      75% { transform: translate(-4px, 1px) rotate(-1deg); }
+    }
+
+    @keyframes shake5 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(3px, 3px) rotate(3deg); }
+      50% { transform: translate(-3px, -3px) rotate(-3deg); }
+      75% { transform: translate(2px, -2px) rotate(2deg); }
+    }
+
+    .float-animation {
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 25s;
+    }
+
+    .shake-animation {
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 3s;
     }
   </style>
 </head>
@@ -127,6 +234,12 @@
     <a href="#">Holding</a>
     <a href="#">About Us</a>
   </nav>
+
+  <div class="floating-logo" style="top: 15%; left: 10%; animation: float1 25s infinite ease-in-out, shake1 3s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 20%; right: 15%; animation: float2 27s infinite ease-in-out, shake2 3.2s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 60%; left: 5%; animation: float3 26s infinite ease-in-out, shake3 2.8s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 70%; right: 10%; animation: float4 28s infinite ease-in-out, shake4 3.1s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 40%; left: 80%; animation: float5 24s infinite ease-in-out, shake5 2.9s infinite ease-in-out;"></div>
 
   <section class="hero">
     <img src="logo.png" alt="MemeCoinLauncher Logo" class="logo" />
@@ -157,5 +270,65 @@
   <footer>
     &copy; 2025 MemeCoinLauncher. All rights reserved.
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const logos = document.querySelectorAll('.floating-logo');
+      const logoFiles = ['logo1.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo5.png'];
+      
+      logos.forEach((logo, index) => {
+        if (index < logoFiles.length) {
+          logo.innerHTML = `<img src="${logoFiles[index]}" alt="Logo ${index + 1}" />`;
+        }
+      });
+
+      const logoPositions = [
+        { x: 10, y: 15 },
+        { x: 85, y: 20 },
+        { x: 5, y: 60 },
+        { x: 90, y: 70 },
+        { x: 80, y: 40 }
+      ];
+
+      function updateLogoPositions() {
+        logos.forEach((logo, index) => {
+          const pos = logoPositions[index];
+          logo.style.left = `${pos.x}%`;
+          logo.style.top = `${pos.y}%`;
+        });
+      }
+
+      updateLogoPositions();
+
+      function preventCrossing() {
+        const minDistance = 15;
+        
+        for (let i = 0; i < logoPositions.length; i++) {
+          for (let j = i + 1; j < logoPositions.length; j++) {
+            const dx = Math.abs(logoPositions[i].x - logoPositions[j].x);
+            const dy = Math.abs(logoPositions[i].y - logoPositions[j].y);
+            
+            if (dx < minDistance && dy < minDistance) {
+              logoPositions[i].x += (Math.random() - 0.5) * 5;
+              logoPositions[i].y += (Math.random() - 0.5) * 5;
+              logoPositions[j].x += (Math.random() - 0.5) * 5;
+              logoPositions[j].y += (Math.random() - 0.5) * 5;
+              
+              logoPositions[i].x = Math.max(2, Math.min(98, logoPositions[i].x));
+              logoPositions[i].y = Math.max(5, Math.min(95, logoPositions[i].y));
+              logoPositions[j].x = Math.max(2, Math.min(98, logoPositions[j].x));
+              logoPositions[j].y = Math.max(5, Math.min(95, logoPositions[j].y));
+            }
+          }
+        }
+        
+        updateLogoPositions();
+      }
+
+      setInterval(preventCrossing, 3000);
+      
+      window.addEventListener('resize', updateLogoPositions);
+    });
+  </script>
 </body>
 </html>
