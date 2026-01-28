@@ -178,6 +178,41 @@
       75% { transform: translate(20px, -80px) rotate(180deg); }
     }
 
+    @keyframes float6 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(50px, 30px) rotate(45deg); }
+      50% { transform: translate(30px, 50px) rotate(90deg); }
+      75% { transform: translate(70px, 10px) rotate(135deg); }
+    }
+
+    @keyframes float7 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-30px, 50px) rotate(-45deg); }
+      50% { transform: translate(-50px, 30px) rotate(-90deg); }
+      75% { transform: translate(-10px, 70px) rotate(-135deg); }
+    }
+
+    @keyframes float8 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(60px, -50px) rotate(75deg); }
+      50% { transform: translate(50px, -60px) rotate(150deg); }
+      75% { transform: translate(80px, -30px) rotate(225deg); }
+    }
+
+    @keyframes float9 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-60px, -50px) rotate(-75deg); }
+      50% { transform: translate(-50px, -60px) rotate(-150deg); }
+      75% { transform: translate(-30px, -80px) rotate(-225deg); }
+    }
+
+    @keyframes float10 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(40px, 80px) rotate(30deg); }
+      50% { transform: translate(80px, 40px) rotate(60deg); }
+      75% { transform: translate(20px, 90px) rotate(90deg); }
+    }
+
     @keyframes shake1 {
       0%, 100% { transform: translate(0, 0) rotate(0deg); }
       25% { transform: translate(2px, 3px) rotate(1deg); }
@@ -213,16 +248,39 @@
       75% { transform: translate(2px, -2px) rotate(2deg); }
     }
 
-    .float-animation {
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-      animation-duration: 25s;
+    @keyframes shake6 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(1px, 2px) rotate(0.5deg); }
+      50% { transform: translate(-1px, -2px) rotate(-0.5deg); }
+      75% { transform: translate(2px, -1px) rotate(1.5deg); }
     }
 
-    .shake-animation {
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-      animation-duration: 3s;
+    @keyframes shake7 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-2px, 1px) rotate(-0.5deg); }
+      50% { transform: translate(2px, -1px) rotate(0.5deg); }
+      75% { transform: translate(-1px, 2px) rotate(-1.5deg); }
+    }
+
+    @keyframes shake8 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(3px, 1px) rotate(1.5deg); }
+      50% { transform: translate(-3px, -1px) rotate(-1.5deg); }
+      75% { transform: translate(1px, 3px) rotate(2.5deg); }
+    }
+
+    @keyframes shake9 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-1px, -3px) rotate(-1.5deg); }
+      50% { transform: translate(1px, 3px) rotate(1.5deg); }
+      75% { transform: translate(-3px, 1px) rotate(-2.5deg); }
+    }
+
+    @keyframes shake10 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(2px, 2px) rotate(2deg); }
+      50% { transform: translate(-2px, -2px) rotate(-2deg); }
+      75% { transform: translate(1px, -1px) rotate(3deg); }
     }
   </style>
 </head>
@@ -235,11 +293,16 @@
     <a href="#">About Us</a>
   </nav>
 
-  <div class="floating-logo" style="top: 15%; left: 10%; animation: float1 25s infinite ease-in-out, shake1 3s infinite ease-in-out;"></div>
-  <div class="floating-logo" style="top: 20%; right: 15%; animation: float2 27s infinite ease-in-out, shake2 3.2s infinite ease-in-out;"></div>
-  <div class="floating-logo" style="top: 60%; left: 5%; animation: float3 26s infinite ease-in-out, shake3 2.8s infinite ease-in-out;"></div>
-  <div class="floating-logo" style="top: 70%; right: 10%; animation: float4 28s infinite ease-in-out, shake4 3.1s infinite ease-in-out;"></div>
-  <div class="floating-logo" style="top: 40%; left: 80%; animation: float5 24s infinite ease-in-out, shake5 2.9s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 10%; left: 5%; animation: float1 25s infinite ease-in-out, shake1 3s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 15%; right: 10%; animation: float2 27s infinite ease-in-out, shake2 3.2s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 55%; left: 3%; animation: float3 26s infinite ease-in-out, shake3 2.8s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 65%; right: 8%; animation: float4 28s infinite ease-in-out, shake4 3.1s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 35%; left: 85%; animation: float5 24s infinite ease-in-out, shake5 2.9s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 25%; left: 25%; animation: float6 22s infinite ease-in-out, shake6 3.3s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 75%; right: 25%; animation: float7 29s infinite ease-in-out, shake7 2.7s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 45%; left: 40%; animation: float8 23s infinite ease-in-out, shake8 3.4s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 85%; left: 60%; animation: float9 30s infinite ease-in-out, shake9 2.6s infinite ease-in-out;"></div>
+  <div class="floating-logo" style="top: 5%; left: 50%; animation: float10 21s infinite ease-in-out, shake10 3.5s infinite ease-in-out;"></div>
 
   <section class="hero">
     <img src="logo.png" alt="MemeCoinLauncher Logo" class="logo" />
@@ -274,20 +337,26 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const logos = document.querySelectorAll('.floating-logo');
-      const logoFiles = ['logo1.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo5.png'];
+      const logoFiles = ['logo1.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo5.png', 'logo1.png', 'logo2.png', 'logo3.png', 'logo4.png', 'logo5.png'];
       
       logos.forEach((logo, index) => {
         if (index < logoFiles.length) {
-          logo.innerHTML = `<img src="${logoFiles[index]}" alt="Logo ${index + 1}" />`;
+          const logoIndex = index % 5 + 1;
+          logo.innerHTML = `<img src="logo${logoIndex}.png" alt="Logo ${logoIndex}" />`;
         }
       });
 
       const logoPositions = [
-        { x: 10, y: 15 },
-        { x: 85, y: 20 },
-        { x: 5, y: 60 },
-        { x: 90, y: 70 },
-        { x: 80, y: 40 }
+        { x: 5, y: 10 },
+        { x: 90, y: 15 },
+        { x: 3, y: 55 },
+        { x: 92, y: 65 },
+        { x: 85, y: 35 },
+        { x: 25, y: 25 },
+        { x: 75, y: 75 },
+        { x: 40, y: 45 },
+        { x: 60, y: 85 },
+        { x: 50, y: 5 }
       ];
 
       function updateLogoPositions() {
@@ -301,7 +370,7 @@
       updateLogoPositions();
 
       function preventCrossing() {
-        const minDistance = 15;
+        const minDistance = 12;
         
         for (let i = 0; i < logoPositions.length; i++) {
           for (let j = i + 1; j < logoPositions.length; j++) {
@@ -309,15 +378,15 @@
             const dy = Math.abs(logoPositions[i].y - logoPositions[j].y);
             
             if (dx < minDistance && dy < minDistance) {
-              logoPositions[i].x += (Math.random() - 0.5) * 5;
-              logoPositions[i].y += (Math.random() - 0.5) * 5;
-              logoPositions[j].x += (Math.random() - 0.5) * 5;
-              logoPositions[j].y += (Math.random() - 0.5) * 5;
+              logoPositions[i].x += (Math.random() - 0.5) * 8;
+              logoPositions[i].y += (Math.random() - 0.5) * 8;
+              logoPositions[j].x += (Math.random() - 0.5) * 8;
+              logoPositions[j].y += (Math.random() - 0.5) * 8;
               
-              logoPositions[i].x = Math.max(2, Math.min(98, logoPositions[i].x));
-              logoPositions[i].y = Math.max(5, Math.min(95, logoPositions[i].y));
-              logoPositions[j].x = Math.max(2, Math.min(98, logoPositions[j].x));
-              logoPositions[j].y = Math.max(5, Math.min(95, logoPositions[j].y));
+              logoPositions[i].x = Math.max(1, Math.min(99, logoPositions[i].x));
+              logoPositions[i].y = Math.max(1, Math.min(99, logoPositions[i].y));
+              logoPositions[j].x = Math.max(1, Math.min(99, logoPositions[j].x));
+              logoPositions[j].y = Math.max(1, Math.min(99, logoPositions[j].y));
             }
           }
         }
@@ -325,7 +394,7 @@
         updateLogoPositions();
       }
 
-      setInterval(preventCrossing, 3000);
+      setInterval(preventCrossing, 2500);
       
       window.addEventListener('resize', updateLogoPositions);
     });
